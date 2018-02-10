@@ -16,6 +16,7 @@ var script;                 // this variable will hold our script
 var wzx;
 var host;
 var n;
+var photo;
 
 function prepareNovel()
 {
@@ -38,6 +39,7 @@ function prepareNovel()
         }
     );
     n = new Character("");
+	photo = new Character(""); 
     
     // and put your script commands into this array
     script = [
@@ -154,8 +156,9 @@ function prepareNovel()
 		],
 		
 		label, "quest10",
+		photo, {image: "finger.png", position: new Position(0.45, .75, 0, 1)},
 		menu, [
-			"<img src="images/finger.png" alt="finger" /><br />Глядя на эту картинку, вы думаете о…",
+			"Глядя на эту картинку, вы думаете о…",
 			"=&#9633;= Нажать-нажать-нажать-нажать-нажать (или почесаться)", [jump, "quest16"],
 			"Это средний палец Хуан Шаотяня?", [jump, "quest23"],
 			"Откуда там лишняя линия? Ошибка типографии?", [jump, "quest18"],
@@ -171,10 +174,10 @@ function prepareNovel()
 		
 		label, "quest12",
 		menu, [
-			"Какие упражнения вы делаете чаще всего?",
-			"Ходьба", [jump, "quest17"],
-			"Бег", [jump, "quest14"],
-			"Приседания", [jump, "quest20"],
+			"Сейчас вы пользуетесь телефоном…",
+			"С сенсорным экраном", [jump, "quest14"],
+			"Слайдером", [jump, "quest16"],
+			"Раскладушкой", [jump, "quest18"],
 		],	
 
     ];
